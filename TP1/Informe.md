@@ -10,12 +10,13 @@
 - Viberti Tomas
 
 ### Docentes
-- Jorge, Javier
+- Jorge, Javier Alejandro
 - Solinas, Miguel
 
 ### 2026
 
 ---
+# Informé PC de Gastón Capdevila
 
 ## GPROF
 
@@ -79,6 +80,54 @@ Aplicando la flag -p se obtiene como salida solo el perfil plano.
 - El resto son funciones del kernel Linux (`[k]`) que se pueden ignorar.
 
 ---
+# Informe PC Tomás Viberti
+
+## GPROF
+
+![alt text](image-15.png)
+
+![alt text](image-16.png)
+
+A continuación se muestra el analysis.txt obtenido:
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
+
+Si se ejecuta el comando con el comando de supresión de las funciones declaradas estáticamente, se obtiene lo siguiente:
+
+![alt text](image-19.png)
+
+![alt text](image-20.png)
+
+Si se eliminan los textos detallados usando el comando -b:
+
+![alt text](image-21.png)
+
+![alt text](image-22.png)
+
+Si ahora solo se imprime el perfil plano con el comando -p:
+
+![alt text](image-23.png)
+
+![alt text](image-9.png)
+
+Y si se quiere imprimir información especifica de una función en perfil plano, en este caso func1, se obtiene:
+
+![alt text](image-24.png)
+
+![alt text](image-11.png)
+
+Por otro lado, si se genera el gráfico con gprof2dot mediante el comando “gprof ./test_gprof gmon.out | gprof2dot | dot -Tpng -o grafo_perfilado.png”, se obtiene el siguiente gráfico:
+
+![alt text](image-12.png)
+
+Por último si se ejecuta el codigo con perfilado usando perf:
+
+![alt text](image-25.png)
+
+![alt text](image-26.png)
+
 
 ## Benchmarks
 # Reporte de Benchmarking y Rendimiento del Sistema
